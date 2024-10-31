@@ -46,3 +46,5 @@ const colecaoAP = [
     
     
 ]
+
+exports.colecaoAP = colecaoAP;
