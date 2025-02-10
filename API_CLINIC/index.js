@@ -1,3 +1,6 @@
+//Para a pesquisa por nome = adicione localhost:9000/medicos/nome?nome=
+////Para a pesquisa por especialidade = adicione localhost:9000/medicos/especialidade?especialidade=
+
 const express = require('express');
 const { returnMedicos, returnMedicosPorNome, returnMedicosPorEspecialidade, returnMedicosPorId } = require('./servico/retornaMedicos_servico.js');
 
@@ -16,7 +19,7 @@ app.get('/medicos', async (req, res) => {
   }
 });
 
-app.get('/medicos/n', async (req, res) => {
+app.get('/medicos/nome', async (req, res) => {
   const { nome } = req.query;
 
   if (!nome) {
